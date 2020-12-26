@@ -6,11 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form action = "" method = "POST"> 
+    {% block content %}
+
+    <form action = "/show/" method = "POST"> 
         {% csrf_token %}  
         <label for="your_name">Your name: </label> 
-        <input id="your_name" type="text" name="your_name"> 
+        <input id="your_name" type="text" name="Enter name here"> 
         <input type="submit" value="OK"> 
+        
     </form> 
+
+   {% endblock %}
 </body>
 </html>
